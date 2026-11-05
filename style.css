@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", Arial, sans-serif;
+  color: #25233a;
+  background: #f5f4fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 8% 4%, rgba(173, 156, 255, .24), transparent 28rem),
+    radial-gradient(circle at 95% 18%, rgba(255, 190, 211, .23), transparent 26rem),
+    #f6f5fb;
+}
+button, input, select { font: inherit; }
+.page-shell { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0 28px; }
+.hero {
+  display: flex; align-items: center; gap: 20px; padding: 8px 8px 30px;
+}
+.brand-mark {
+  width: 76px; height: 76px; display: grid; place-items: center; flex: 0 0 auto;
+  border-radius: 24px; background: linear-gradient(145deg, #7868ed, #9b70e9);
+  box-shadow: 0 12px 28px rgba(105, 83, 211, .24); font-size: 34px;
+}
+.eyebrow { margin: 0 0 5px; color: #7868d8; font-size: 10px; font-weight: 800; letter-spacing: 1.8px; }
+h1, h2 { font-family: "Manrope", "DM Sans", sans-serif; }
+h1 { margin: 0; color: #29243f; font-size: clamp(30px, 5vw, 42px); line-height: 1.1; letter-spacing: -1.5px; }
+.hero-copy { margin: 8px 0 0; color: #77748b; font-size: 14px; }
+.card {
+  margin: 0 0 20px; padding: 26px; border: 1px solid rgba(225, 222, 240, .9);
+  border-radius: 22px; background: rgba(255,255,255,.92);
+  box-shadow: 0 12px 35px rgba(49, 40, 95, .055);
+}
+.section-heading { display: flex; align-items: flex-start; gap: 13px; margin-bottom: 21px; }
+.step-number {
+  display: grid; place-items: center; width: 31px; height: 31px; flex: 0 0 auto;
+  border-radius: 10px; color: #6d5bd0; background: #f0edff; font-size: 12px; font-weight: 800;
+}
+h2 { margin: 0; color: #302b48; font-size: 19px; letter-spacing: -.35px; }
+.section-heading p { margin: 5px 0 0; color: #858197; font-size: 13px; line-height: 1.5; }
+.upload-zone {
+  min-height: 142px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 8px; padding: 20px; border: 1.5px dashed #c9c1f4; border-radius: 17px;
+  background: linear-gradient(135deg, #faf9ff, #fff8fc); cursor: pointer; text-align: center;
+  transition: border-color .2s, background .2s;
+}
+.upload-zone:hover { border-color: #8472e4; background: #f7f4ff; }
+.upload-icon { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 12px; background: #ebe7ff; color: #6c5bd2; font-size: 25px; line-height: 1; }
+.upload-zone strong { color: #4b4568; font-size: 14px; }
+.upload-zone span:last-child { color: #9691a7; font-size: 11px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.preview-area { display: flex; justify-content: center; margin-top: 16px; }
+.preview-area:empty { display: none; }
+.preview-area img { display: block; max-width: 100%; max-height: 300px; object-fit: contain; border-radius: 13px; border: 1px solid #ece9f4; }
+.primary-button {
+  width: 100%; min-height: 47px; margin-top: 17px; border: 0; border-radius: 13px;
+  color: #fff; background: linear-gradient(100deg, #6b5bd2, #9070e4);
+  box-shadow: 0 8px 18px rgba(108, 88, 207, .2); font-weight: 700; cursor: pointer;
+  transition: transform .15s, opacity .15s;
+}
+.primary-button:hover:not(:disabled) { transform: translateY(-1px); }
+.primary-button:disabled { cursor: not-allowed; opacity: .45; box-shadow: none; }
+.status { margin: 12px 0 0; color: #77738b; font-size: 12px; text-align: center; line-height: 1.5; }
+.field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 17px 20px; }
+.field { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+.field label { color: #514c68; font-size: 12px; font-weight: 700; }
+.field input, .field select {
+  width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid #e3e0ed; border-radius: 11px;
+  outline: none; color: #302c45; background: #fff; font-size: 13px;
+}
+.field input:focus, .field select:focus { border-color: #8a79e5; box-shadow: 0 0 0 3px rgba(138,121,229,.12); }
+.field-hint { min-height: 14px; color: #9691a7; font-size: 10px; }
+.field-hint.uncertain { color: #b57928; }
+.field-hint.confirmed { color: #44866b; }
+.review-note { margin: 18px 0 0; padding: 12px 14px; border-radius: 11px; background: #f8f7fc; color: #77738b; font-size: 12px; line-height: 1.55; }
+.save-button { margin-top: 13px; }
+.ocr-details { margin-top: 17px; color: #77738b; font-size: 12px; }
+.ocr-details summary { cursor: pointer; font-weight: 600; }
+.ocr-details pre { max-height: 190px; overflow: auto; padding: 12px; border-radius: 10px; background: #f7f6fb; color: #5f5b70; white-space: pre-wrap; overflow-wrap: anywhere; font: 11px/1.5 Consolas, monospace; }
+.bill-list { display: grid; gap: 10px; }
+.empty-state { margin: 0; padding: 22px 12px; border-radius: 13px; background: #faf9fd; color: #9994a9; text-align: center; font-size: 12px; }
+.bill-item { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 14px 15px; border: 1px solid #eeecf4; border-radius: 13px; background: #fff; }
+.bill-main { display: grid; gap: 5px; min-width: 0; }
+.bill-main strong { overflow-wrap: anywhere; color: #403b58; font-size: 13px; }
+.bill-main span { color: #918ca1; font-size: 11px; }
+.bill-side { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex: 0 0 auto; }
+.bill-side b { color: #5c4db6; font-size: 13px; }
+.delete-button { padding: 4px 8px; border: 0; border-radius: 7px; color: #bb6576; background: #fff1f3; font-size: 10px; cursor: pointer; }
+footer { padding: 4px 0 10px; color: #a19caf; text-align: center; font-size: 10px; }
+@media (max-width: 600px) {
+  .page-shell { width: min(100% - 22px, 520px); padding-top: 24px; }
+  .hero { gap: 14px; padding: 5px 4px 23px; }
+  .brand-mark { width: 60px; height: 60px; border-radius: 19px; font-size: 28px; }
+  .hero-copy { max-width: 260px; font-size: 12px; line-height: 1.5; }
+  .card { padding: 19px 16px; border-radius: 18px; }
+  .field-grid { grid-template-columns: 1fr; gap: 13px; }
+  .bill-item { padding: 12px; }
+}

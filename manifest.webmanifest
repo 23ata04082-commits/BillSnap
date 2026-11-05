@@ -1,0 +1,12 @@
+{
+  "name": "Bill Snap",
+  "short_name": "Bill Snap",
+  "description": "Scan bills and track expenses.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f5fb",
+  "theme_color": "#6757d9",
+  "icons": [
+    { "src": "/bill-snap-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
